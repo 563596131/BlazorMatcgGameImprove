@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{A9399ABC-44AC-4948-80AA-B65AF54505AF}|Default">
+  <MonoDevelop.Ide.ItemProperties.BlazorMatcgGameImprove PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorMatcgGameImprove/Pages/Index.razor">
+    <Files>
+      <File FileName="BlazorMatcgGameImprove/Pages/Index.razor" Line="133" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlazorMatcgGameImprove" expanded="True">
+            <Node name="BlazorMatcgGameImprove" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
