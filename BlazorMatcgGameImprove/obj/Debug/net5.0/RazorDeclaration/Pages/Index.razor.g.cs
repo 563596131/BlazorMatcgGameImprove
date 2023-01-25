@@ -7,11 +7,6 @@
 namespace BlazorMatcgGameImprove.Pages
 {
     #line hidden
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/_Imports.razor"
 using System.Net.Http;
@@ -62,13 +57,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 9 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/_Imports.razor"
 using BlazorMatcgGameImprove;
 
@@ -82,6 +70,97 @@ using BlazorMatcgGameImprove.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Collections.Generic;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Linq;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Reflection;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Security.Cryptography.X509Certificates;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Text.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+using System.Threading.Tasks;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +169,286 @@ using BlazorMatcgGameImprove.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 160 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/Pages/Index.razor"
+       
+    private bool isPlay;
+    private string isClick = "none";
+    private string levelWidth = "400px";
+    private string overString;
+    private int excessNum = 32; // the numbers of cheat
+    private double score = 0;
+    private int cheatNum = 0;
+    private int randomIntA = 0;
+    private int randomIntB = 0;
+    private int randomNum = 0;
+    private double difficultNum = 1; // easy? hard?
+    private string randomClass;
+    private Random random = new Random();
+    private List<string> animalEmoji = new List<string>()
+            {
+                "🐶", "🐶",
+                "🐺", "🐺",
+                "🐮", "🐮",
+                "🦊", "🦊",
+                "🐱", "🐱",
+                "🦁", "🦁",
+                "🐯", "🐯",
+                "🐹", "🐹",
+            };
+
+    private List<string> shuffledAnimals = new List<string>();
+    private List<double> rankLists = new();
+    private int matchesFound = 0;
+    private Timer aTimer;
+    private int counter = 100;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string jsonList = JsonSerializer.Serialize(rankLists);
+        Console.WriteLine(jsonList);
+        aTimer = new Timer(1000);
+        SetUpGame();
+    }
+
+    private void SetUpGame()
+    {
+        Random ranom = new Random();
+        shuffledAnimals = animalEmoji
+            .OrderBy(item => random.Next())
+            .ToList();
+        matchesFound = 0;
+    }
+
+    string lastAnimalFound = string.Empty;
+    string lastDescription = string.Empty;
+
+    private async Task ButtonClickAsync(string animal, string animalDescription)
+    {
+        Console.WriteLine(lastAnimalFound);
+        Console.WriteLine(levelWidth);
+        Console.WriteLine(excessNum);
+        if ((levelWidth == "400px" && excessNum == 32) || (levelWidth == "600px" && excessNum == 72))
+        {
+            Console.WriteLine("Timer Start");
+            StartTime();
+        }
+        if (randomClass != null)
+        {
+            await JS.InvokeVoidAsync("closePreRandom", randomClass);
+        }
+        if (excessNum > 0)
+        {
+            excessNum--;
+        }
+        if (lastAnimalFound == string.Empty)
+        {
+            // First selection of pair
+            lastAnimalFound = animal;
+            lastDescription = animalDescription;
+        }
+        else if ((lastAnimalFound == animal) && (animalDescription != lastDescription))
+        {
+            // Match found! Reset for next pair.
+            lastAnimalFound = string.Empty;
+            // Replace found animals with empty string to hide them
+            shuffledAnimals = shuffledAnimals
+                .Select(a => a.Replace(animal, string.Empty))
+                .ToList();
+
+            matchesFound++;
+            if (levelWidth == "400px" && matchesFound == 8 || levelWidth == "600px" && matchesFound == 18)
+            {
+                randomClass = null;
+                isPlay = false;
+                aTimer.Elapsed -= CountDownTimer;
+                aTimer.Enabled = false;
+                overString = "Win, Play Agian?";
+                score = counter * 10 * difficultNum - cheatNum * 20;
+                rankLists.Add(score);
+                SetUpGame();
+            }
+        }
+        else
+        {
+            // User selected a pair that don't match
+            // Resrt selection
+            lastAnimalFound = string.Empty;
+        }
+        if (excessNum == 0)
+        {
+            randomClass = null;
+            isPlay = false;
+            isClick = "none";
+            aTimer.Elapsed -= CountDownTimer;
+            aTimer.Enabled = false;
+            overString = "Defeat, Game Over";
+            // score cleared after fail
+            if (levelWidth == "400px" && matchesFound == 8 || levelWidth == "600px" && matchesFound == 18)
+            {
+                score = counter * 10 * difficultNum - cheatNum * 20;
+            }
+            else
+            {
+                score = 0;
+            }
+            rankLists.Add(score);
+            StateHasChanged();
+        }
+    }
+    private void StartTime()
+    {
+        aTimer.Elapsed += CountDownTimer;
+        aTimer.Enabled = true;
+    }
+    // countdownTimer
+    private void CountDownTimer(Object source, System.Timers.ElapsedEventArgs e)
+    {
+        if (counter > 0)
+        {
+            counter -= 1;
+        }
+        else
+        {
+            aTimer.Elapsed -= CountDownTimer;
+            aTimer.Enabled = false;
+            // The function that needs to be triggered after the countdown ends
+            isPlay = false;
+            randomClass = null;
+            isClick = "none";
+            overString = "Defeat, Game Over";
+            // Score cleared to 0 after failure
+            if (levelWidth == "400px" && matchesFound == 8 || levelWidth == "600px" && matchesFound == 18)
+            {
+                score = counter * 10 * difficultNum - cheatNum * 20;
+            }
+            else
+            {
+                score = 0;
+            }
+            rankLists.Add(score);
+        }
+        InvokeAsync(StateHasChanged); // force refresh
+    }
+
+    private async Task SelectEasyAsync()
+    {
+        difficultNum = 1;  // easy version
+        if (aTimer.Enabled == true)
+        {
+            aTimer.Elapsed -= CountDownTimer;
+            aTimer.Enabled = false;
+        }
+        cheatNum = 0;
+        if (randomClass != null)
+        {
+            await JS.InvokeVoidAsync("closePreRandom", randomClass);
+        }
+        animalEmoji = new List<string>()
+                {
+                    "🐶", "🐶",
+                    "🐺", "🐺",
+                    "🐮", "🐮",
+                    "🦊", "🦊",
+                    "🐱", "🐱",
+                    "🦁", "🦁",
+                    "🐯", "🐯",
+                    "🐹", "🐹",
+                };
+        SetUpGame();
+        excessNum = 32;
+        levelWidth = "400px";
+        isClick = "auto";
+        counter = 100;
+        isPlay = true;
+    }
+    private async Task SelectHardAsync()
+    {
+        difficultNum = 1.5; // hard version
+        if (aTimer.Enabled == true)
+        {
+            aTimer.Elapsed -= CountDownTimer;
+            aTimer.Enabled = false;
+        }
+        cheatNum = 0;
+        if (randomClass != null)
+        {
+            await JS.InvokeVoidAsync("closePreRandom", randomClass);
+        }
+        animalEmoji = new List<string>()
+                {
+                    "🐶", "🐶",
+                    "🐺", "🐺",
+                    "🐮", "🐮",
+                    "🦊", "🦊",
+                    "🐱", "🐱",
+                    "🦁", "🦁",
+                    "🐯", "🐯",
+                    "🐹", "🐹",
+                    "🐠", "🐠",
+                    "🦔", "🦔",
+                    "🙊", "🙊",
+                    "🦅", "🦅",
+                    "🦈", "🦈",
+                    "🐉", "🐉",
+                    "🐇", "🐇",
+                    "🚀", "🚀",
+                    "🤡", "🤡",
+                    "🦄", "🦄",
+                };
+        SetUpGame();
+        excessNum = 72;
+        levelWidth = "600px";
+        isClick = "auto";
+        counter = 200;
+        isPlay = true;
+        StateHasChanged();
+    }
+    string Message { get; set; } = string.Empty;
+
+    private async void SelectCheat()
+    {
+        if (isPlay)
+        {
+            //Record the number of cheating
+            cheatNum++;
+            //First judge whether it is easy or hard
+            //Easy, hard are different, levelWidth is different, range is different
+            if (levelWidth == "400px")
+            {
+                randomIntA = 0;
+                randomIntB = 15;
+            }
+            else
+            {
+                randomIntA = 0;
+                randomIntB = 35;
+            }
+            //Pick a random number in the range
+            randomNum = random.Next(randomIntA, randomIntB);
+            //Each random number corresponds to cheat{animalNumber}class
+            //Let the attribute of the class be visible, and the flip is realized
+            randomClass = $"cheat{randomNum}";
+            Console.WriteLine("----" + cheatNum);
+            lastDescription = $"Button #{randomNum}";
+            Console.WriteLine(randomClass);
+            await JS.InvokeVoidAsync("HelloWorld");
+            await JS.InvokeVoidAsync("displayRandom", randomClass);
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("ScriptAlert", "You can't cheat before the game starts");
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISyncLocalStorageService SynLocalStorageService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService localStorage { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JS { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NotificationService _notice { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IMessageService _message { get; set; }
     }
 }
 #pragma warning restore 1591
