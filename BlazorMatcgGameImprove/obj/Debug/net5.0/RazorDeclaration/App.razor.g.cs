@@ -82,6 +82,13 @@ using BlazorMatcgGameImprove.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/_Imports.razor"
+using AntDesign;
+
+#line default
+#line hidden
+#nullable disable
     public partial class App : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

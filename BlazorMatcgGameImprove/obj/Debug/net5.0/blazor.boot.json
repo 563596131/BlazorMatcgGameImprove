@@ -7,8 +7,13 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "AntDesign.dll": "sha256-J1wUxb81IpdwWGaHdWF98amf0XWDKt2SQZr5oOG02Ps=",
+      "Blazored.LocalStorage.dll": "sha256-5Mmb3rkofuJkj2sUYYm80IUBRwC8QQO8CziqiSwsMgg=",
+      "Bunit.Core.dll": "sha256-zovgNsbcjw0E1mKARotcbS2KOf6eBmcW1ZoYMMtVIQo=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-5QpvlVP++Gkc1dR8QwljPr2My0TdN\/zMkNik9vPVNxk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-lIaWNwfsw4JmImsjOS8Y60om1ZDgL2CTkBB+RmJPCgk=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-RETzcaqJB7uXmSqtgbNeKNNc5YC\/Ux+Ud\/XI\/\/VCR38=",
+      "Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll": "sha256-VGaB03HIjFg4jeK7BomIFzlhhY3vW5N+jWuRqZkbJsY=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-RA8PrAgd0Srd27z2Nw+t5X4AGrsOq2zTT9OuXAOuO1Q=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-LfHisJVDQxINNzTTborai7vETkC6yZGFSo1B8O4HoNM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-lAbB5N6u+XkDd3m2Uk3MXtKgyRgY4CiXkP9xzK0DOFo=",
@@ -29,6 +34,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-f2PgoftqEkKRuuiAk6S1MHygOuqZBHzB0HOB3vR93TU=",
       "Microsoft.JSInterop.dll": "sha256-pr6L2mjcqc8D0q4a8E717JbHBm5iEM4PFAo1DBJmaUg=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-wm\/PyT01CAndytn\/B\/egrjENN3gkDMsMDaFon1TwCHA=",
+      "OneOf.dll": "sha256-K99lDyL6VrtTDYGRk5o+Q3caW25Uogee\/1e7aIvpgLY=",
       "System.IO.Pipelines.dll": "sha256-\/C5xhI+m3Aqrcjxy\/TauLyqv\/\/5l8WEW3rXFtVlNhy8=",
       "Microsoft.CSharp.dll": "sha256-PpkoBrb5GDDzBCVjEGJ15VkONpHLxk8ZZ3uc0eDYPaY=",
       "Microsoft.VisualBasic.Core.dll": "sha256-SyyaBBG5sBtJEfy89ATtHrxESu8\/SyNLYJXV1OaHYG0=",
@@ -195,11 +201,11 @@
       "mscorlib.dll": "sha256-zMI\/dXK7DoZZ9Qm9U9\/jRN4iQ9Ss3w8\/rwQQxC6SW9Y=",
       "netstandard.dll": "sha256-W3q3PN+lpRB+tRJEIhtMgYOGFv0pauEeeCS9iIRkKAM=",
       "System.Private.CoreLib.dll": "sha256-9rUJv1mXEQdGt\/kWiJ1ITPPzp3cAi3lSmqHVTisp7w0=",
-      "BlazorMatcgGameImprove.dll": "sha256-qtWc9pifk\/4tSlkkkEpUWOvoMyMsdjkxim0ySTtAQx8="
+      "BlazorMatcgGameImprove.dll": "sha256-JVz13lEXEcJj9nS7S63x2Y0ERGRkQRZ4T27wFrI4rfQ="
     },
     "lazyAssembly": null,
     "pdb": {
-      "BlazorMatcgGameImprove.pdb": "sha256-A4rH6SKkAdcChhzJIseUoeOP2AkIjEhX6v5Yifz9Ung="
+      "BlazorMatcgGameImprove.pdb": "sha256-Gt4nID3G9rl4UGfXfkHxqDwY86iPh8d3gDxWqk7yVps="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-8oJip361m8OrfLRJOuIeswWKaoxtT27\/wINCxhn+s4c=",

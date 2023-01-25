@@ -1,4 +1,5 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/bin/Debug/net5.0/wwwroot/" />
   <ContentRoot BasePath="/" Path="/Users/lihongyi/Desktop/neu/2023Winter/Week1/6308C#/BlazorMatcgGameImprove/BlazorMatcgGameImprove/obj/Debug/net5.0/scopedcss/bundle/" />
+  <ContentRoot BasePath="_content/AntDesign" Path="/Users/lihongyi/.nuget/packages/antdesign/0.13.3/build/../staticwebassets/" />
 </StaticWebAssets>
